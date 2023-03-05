@@ -25,9 +25,9 @@ Resolver o 8 puzzle usando fila de prioridade.
 O algoritmo de busca A* é uma versão do algoritmo de Dijkstra que executa melhor do que buscas exaustivas em certas situações devido ao seu uso de heurísticas para orientar a pesquisa.
 À medida que o algoritmo de busca está em execução, A* determina o próximo nó a ser expandir determinando a estimativa do custo ou peso para atingir
 o estado objetivo. Isso é feito usando a seguinte equação:
-
+```
     f(n) = g(n) + h(n)
-
+```
 Onde n é o nó no caminho, g(n) é o custo desde o início
 nó ao n dado, e h(n) é o valor heurístico que estima
 o custo restante de n para o estado objetivo.
@@ -41,9 +41,9 @@ O estado final é f=(0,1,2,3,4,5,6,7,8)
 
 Então dado um estado x=(a0,a1,a2,a3,a4,a5,a6,a7,a8)
 , a heurística pode ser calculada como a soma
-
-h(x)=∑i=08I(xi,i)
-
+```
+    h(x)=∑i=08I(xi,i)
+```
 Sendo que I(xi,i)=1
  se e somente se i≠0
  e xi≠i
@@ -53,3 +53,28 @@ Sendo que I(xi,i)=1
 Por exemplo, se o estado for x=(6,2,8,4,0,1,5,3,7)
 , então calcula-se h(x)=8
 , pois todas as peças estão em posições incorretas. Note que o espaço em branco não conta.
+
+## Arquivos
+
+## helpers.py
+
+Aplica funções para criar e atualizar uma fila de prioridades, implementada com heap.
+
+## main.py
+
+Onde inicia o puzzle e acessa os arquivos para jogar.
+
+## puzzle.py
+
+Guarda a classe Puzzle, com seus métodos para cálculo de heurística, impressão e outros mais.
+
+# Manual para inicializar
+
+1. Instale o [python](https://www.python.org/downloads/)
+2. Baixe os arquivos do repositório.
+3. Descompacte e abra o terminal na pasta.
+4. Inicie o programa com o comando
+
+```
+    python main.py
+```
